@@ -1,0 +1,101 @@
+a
+{
+	color: var(  --main-txt-color-clar);
+	padding: 7px 10px;
+}
+
+button:hover
+{
+	color: var(  --main-txt-color-clar);;
+	cursor: pointer;
+}
+
+.btn
+{
+	-webkit-border-radius: .125rem;
+	border-radius: .125rem;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+    font-size: .81rem;
+    margin: 1% 1% 2% 1%;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.btn-primary
+{
+	background: var(--main-bg-color) !important;
+}
+
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle
+{
+	background-color: var(--main-bg-color-active) !important;
+}
+
+.btn-secondary
+{
+	background-color: #a6c;
+	color: #fff;
+}
+
+.btn-close-warning
+{
+	background-color: var(--warning-bg-color);
+}
+
+.btn-close-warning:not([disabled]):not(.disabled).active, .btn-close-warning:not([disabled]):not(.disabled):active, .show>.btn-close-warning.dropdown-toggle
+{
+	background-color: var(--warning-bg-color-contrast-fosc);
+	-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}
+
+#botons_mes_gran_1200, #botons_1200
+{
+	background: none !important;
+	border: none;
+	box-shadow: none;
+	padding: 0px !important;
+}
+
+.tooltip > .tooltip-inner
+{
+	background-color: #95abcf;
+	border: 1px solid #95abcf;
+	color: var(--main-txt-color-clar);
+	font-size: 15px;
+	padding: 5px;
+}
+
+#download_U, #download_L
+{
+	height: 34px;
+	padding: var(--without-padding);
+	padding: 0;
+	width: 36px;
+}
+
+#zoom
+{
+	float: right;
+	margin-top: -80px;
+	position: relative;
+	right: 8px;
+	width: 37px;
+	z-index: 10;
+}
+
+#ZoomIn, #ZoomOut
+{
+	height: 34px;
+	margin-bottom: 5px;
+	padding: var(--without-padding);
+	width: 36px;
+}

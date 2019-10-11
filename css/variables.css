@@ -1,0 +1,36 @@
+:root
+{
+  /************** BACKGROUNDS **************/
+  --main-bg-color: #6c7db6;
+  --main-bg-color-active: #515E89;
+  --main-bg-color-clar: #EDEFF6;
+  --warning-bg-color: #c7254e;
+  --warning-bg-color-contrast-fosc: #951C3B;
+  --warining-alert-bg-color: #f2dede;
+  --exlusivitat-prisma: #d9dded;  
+   /************** REGLETS **************/
+  --regleta-nivell-1: #ffff;
+  --regleta-nivell-2: #FCDADD;
+  --regleta-nivell-3: #7AAADE;
+  --regleta-nivell-4: #F06B68;
+  --regleta-nivell-5: #73C687;
+  --regleta-nivell-6: #C6C6DB;
+  --regleta-nivell-7: #F5DF8E;
+  --regleta-nivell-8: #9C403E;
+  --regleta-nivell-9: #38638C;
+  --regleta-nivell-10: #624D41;  
+  /************** TIPOLOGIA **************/
+  --warining-alert-color: #a94442;
+  --main-txt-color-clar: #ffffff;
+  --main-txt-color-navegador: #007bff;
+  --main-txt-color-blue: #4285f4;
+  --warning-txt-color-red: #c7254e;
+  --main-black: #000000;
+  --main-white: #ffffff;
+  --main-gray: #858585;
+  --text-exclusiu: #556bb6;
+  /************** BORDER **************/
+  --warining-alert-border-color: #ebccd1;
+  --border-gray-clar: #e3e3e3;
+  --border-blue-fosc: #515E89;
+}

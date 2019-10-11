@@ -1,0 +1,99 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	#container_tauler {
+		height: 570px;
+		max-width: 1140px;
+	}
+
+	body {
+		/*margin: 30px auto;*/
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px and max-width:1200px;) {
+	#container_tauler {
+		height: 540px;
+		max-width: 960px;
+	}
+
+	body {
+		/*margin: 30px auto;*/
+	}
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and ((min-width: 768px  and max-width:992px)) {
+	#container_tauler {
+		height: 395px;
+		max-width: 720px;
+	}
+
+	body {
+		/*margin: 40px auto;*/
+	}
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media only screen and  (min-width: 576px and max-width:768px) {
+	#container_tauler {
+		height: 395px;
+		max-width: 540px;
+	}
+
+	.col-sm-8 {
+		-ms-flex: 0 0 63.666667%;
+		flex: 0 0 63.666667%;
+		max-width: 63.666667%;
+	}
+	
+	.col-sm-3 {
+		-ms-flex: 0 0 30%;
+		flex: 0 0 30%;
+		max-width: 30%;
+	}
+	
+	body {
+		/*margin: 40px auto;*/
+	}
+}
+
+body {
+	background-color: rgb(246, 246, 246);
+	display: table;
+	height: -webkit-fill-available;
+	width: -webkit-fill-available;
+}
+
+#container_tauler {
+	box-shadow: 0px 0px 30px -10px #424141;
+	background-image:url(https://www.prisma.cat/documents/imatges/fons/activitats.png);
+	padding: 25px 15px;
+}
+
+#container_marc_de_treball {
+	height: -webkit-fill-available;
+	background-image: url(https://www.prisma.cat/documents/imatges/fons/fons-gris.jpg);
+	box-shadow: 0px 0px 30px -10px #424141;
+	margin-right: 0.5rem;
+	padding: 0px;
+}
+
+#container_elements_de_treball {
+	height: -webkit-fill-available;
+	padding-right: 0px;
+    padding-left: 0px;
+}
+
+#activitat {
+	display: table-cell;
+}
+
+#container_regletes, #separador, #container_botons {
+	clear: both;
+}
+
+.moureElement {
+	cursor: move;
+}

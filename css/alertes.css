@@ -1,0 +1,134 @@
+/****************** ALERTES ********************************/
+
+.alert
+{
+	border:1px solid transparent;
+	border-radius:4px;
+	font-family: Arial, Verdana;
+	font-size: 11.5px;
+	margin-bottom:20px;
+	padding:4px;
+}
+
+.alert>p,.alert>ul
+{
+	margin-bottom:0;
+}
+
+.alert>p+p
+{
+	margin-top:5px
+}
+
+.alert-dismissable,.alert-dismissible
+{
+	padding-right:35px;
+}
+
+.alert-dismissable .close,.alert-dismissible .close
+{
+	color:inherit;
+	position:relative;
+	right:-21px;
+	top:-2px;
+}
+
+.alert-warning .fade
+{
+	opacity:0;
+	-webkit-transition:opacity .15s linear;
+	-o-transition:opacity .15s linear;
+	transition:opacity .15s linear;
+}
+
+.close
+{
+    color: var(--main-black);
+    filter: alpha(opacity=20);
+		float: right;
+    font-size: 21px;
+    font-weight: 700;
+		line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.fade.in
+{
+	opacity:1;
+}
+
+/****************** WARNING ALERT ********************************/
+
+.alert-warning
+{
+	background-color: var(--warining-alert-bg-color);
+	border-color:var(--warining-alert-border-color);
+	color:var(--warining-alert-color);
+	margin-bottom: 0;
+	margin-top: 7px;
+	width: fit-content;
+}
+
+/****************** NO INSCRIT AL CURS ********************************/
+#capcalera
+{
+	height: 154px;
+	margin-left: -10px;
+	margin-top: -25px;
+}
+
+#cos_error 
+{
+	padding-bottom: 20px;
+	padding-top: 11px;
+}
+
+div#activitat 
+{
+	width:890px; 
+	margin: 0 auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding: 25px 10px;
+	user-select: none;
+}
+
+.marc_activitat 
+{
+	width: 80%;
+	background-color: rgba(255,255,255,1);
+	border: 1px solid #CCCCCC;
+	margin: 0 auto;
+	padding: 5px 10px;
+}
+
+#peu 
+{
+	color: #99ACCA;
+}
+
+#peu a 
+{
+	color: #5A7BB8;
+}
+
+#peu a:hover
+{
+	color: #007bff;
+}
+
+a.navegador
+{
+	color: #23527c; 
+	font-weight: bold;
+	padding: 0;
+}
+
+a:hover.navegador
+{
+	color: #007bff;
+	font-weight: bold;
+	padding: 0;
+}
+
+

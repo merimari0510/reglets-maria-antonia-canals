@@ -1,0 +1,199 @@
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	background-color: #fbfbfb;
+	display: flex;
+	flex-direction: column;
+}
+
+.no-seleccionable
+{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+	Remove the navbar's default margin-bottom and rounded borders
+	Posar com a banner el banner X
+*/
+.navbar
+{
+	background: #5A7BB8 url("https://www.prisma.cat/documents/imatges/moodle/baner_moodle.jpg") no-repeat scroll left top;
+	border-radius: 0;
+	margin-bottom: 0;
+	margin-top: -11px;
+	min-height: 80px !important;
+}
+
+/* Set gray background color and 100% height */
+.sidenav
+{
+	height: 100%;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content
+{
+	height: 550px;
+}
+
+.content_canvas, .well
+{
+	background: url('https://www.prisma.cat/documents/imatges/fons/activitats.png') repeat scroll 0% 0% !important;
+	border: 1px solid var(--border-gray-clar);
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.well
+{
+	padding: 10px !important;
+}
+
+#container_canvas:focus
+{
+	outline: 0;
+}
+
+
+/************ ELEMENTS RELACIONATS AMB LA TIPOGRAFIA I LA MIDA DELS ELEMENTS  ***************/
+
+h5
+{
+	color: var(--main-txt-color-blue);
+	line-height: 2;
+}
+
+p
+{
+	line-height: 2;
+}
+
+ul
+{
+	line-height: 2;
+}
+
+/************ ELEMENTS RELACIONATS AMB ELS MODALS ***************/
+
+.modal-warining
+{
+	color: var(--warning-txt-color-red) !important;
+}
+
+/************ ELEMENTS RELACIONATS AMB L'AJUDA ***************/
+
+.help_section
+{
+	text-align: justify;
+}
+
+.help_section i
+{
+    font-size: 1.2rem;
+}
+
+.help_section img:first-child 
+{
+	margin-left: 0px;
+}
+
+.help_section img
+{
+	margin-left: 2em;
+}
+
+.help_section img.text_canvas
+{
+	height: 6em;
+}
+
+.help_section .fa-ul i.fas
+{
+	color: var(--main-txt-color-blue);
+	margin-left: -20px;
+	margin-right: 10px;
+}
+
+.help_section .fa-ul
+{
+	line-height: 35px;
+}
+
+.help_section .screen_width_all
+{
+	width: 100%;
+}
+
+.tab-content .help_section,
+.table-responsive .help_section
+{
+	border: 1px solid var(--border-gray-clar);
+	padding: 20px;
+}
+
+.tab-content .help_section tr,
+.table-responsive .help_section tr
+{
+	line-height: 1.5 !important;
+	padding: 10px !important;
+	vertical-align: middle;
+}
+
+.tab-content .help_section th,
+.table-responsive .help_section th
+{
+	background-color: var(--main-bg-color);
+	border: 1px solid var(--border-blue-fosc);
+	color: var(--main-white);
+	text-align: center !important;
+	vertical-align: middle;
+	width: 50px;
+}
+
+.tab-content .help_section td,
+.table-responsive .help_section td
+{
+	border: 1px solid var(--border-blue-fosc);
+	padding: 1.1rem;
+	text-align: justify;
+	vertical-align: middle;
+}
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.focus>a, .nav-tabs>li>a.show.active, .nav-tabs>li>a.focus
+{
+	background-color: var(--main-bg-color);
+	border: 1px solid var(--border-gray-clar) ;
+	color: var(--main-white) ;
+}
+
+.nav-tabs>li>a
+{
+	background-color: var(--main-bg-color-clar);
+	border: 1px solid var(--border-gray-clar);
+	border-radius: 4px 4px 0 0;
+	color: var(--main-bg-color);
+	display: block;
+	line-height: 1.42857143;
+	margin-right: 0;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.nav-tabs>li
+{
+	float: left;
+	margin-bottom: -1px;
+	text-align: center;
+	width: 25%;
+}

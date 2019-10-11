@@ -1,0 +1,110 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 370px)
+{
+
+    /************ MIDES DE L'ESTRUCTURA DE LA PÀGINA ***************/
+
+    .sidenav
+    {
+    	height:auto !important;
+    	/*padding: 15px;*/
+    }
+
+    .row.content
+    {
+    	height:auto;
+    	padding: 0 5px;
+    }
+
+    .container
+    {
+  	   max-width: 600px;
+    }
+
+    .col-sm-4
+    {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    	max-width: 100%;
+    	padding: 0;
+    }
+
+    .col-sm-8
+    {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    	height: 514px;
+    	max-width: 100%;
+    }
+
+    /************ MIDES DEL BLOC DELS BOTONS ***************/
+
+    #botons_mes_gran_1200
+    {
+    	display: none;
+    }
+
+    #botons_1200
+    {
+      display: block;
+    	margin-top: 5px;
+       margin-bottom: 5px;
+    }
+
+  /************ MIDES DElS COMPONENTS (REGLETES I TEXTS)***************/
+
+  .regleta
+  {
+	  height: 25px;
+  }
+
+  .tipus_1
+  {
+	  width: 25px;
+  }
+
+  .tipus_2
+  {
+	  width: 50px;
+  }
+
+  .tipus_3
+  {
+	  width: 75px;
+  }
+
+  .tipus_4
+  {
+	  width: 100px;
+  }
+
+  .tipus_5
+  {
+	  width: 125px;
+  }
+
+  .tipus_6
+  {
+	  width: 150px;
+  }
+
+  .tipus_7
+  {
+	  width: 175px;
+  }
+
+  .tipus_8
+  {
+	  width: 200px;
+  }
+
+  .tipus_9
+  {
+	  width: 225px;
+  }
+
+  .tipus_10
+  {
+	  width: 250px;
+  }
+}

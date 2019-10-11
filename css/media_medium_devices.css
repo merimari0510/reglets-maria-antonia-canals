@@ -1,0 +1,133 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+{
+
+    /************ MIDES DE L'ESTRUCTURA DE LA PÀGINA ***************/
+
+  .sidenav
+  {
+  	height: auto;
+  	padding: 15px;
+  }
+
+  .row.content
+  {
+      height:auto;
+  }
+
+  .container
+  {
+  	max-width: 768px;
+  }
+
+  .col-md-5
+  {
+  	-ms-flex: 0 0 41.666667%;
+  	flex: 0 0 41.666667%;
+  	max-width: 41.666667%;
+  	padding-top: 0;
+  }
+
+  .col-md-7
+  {
+  	-ms-flex: 0 0 58.333333%;
+  	flex: 0 0 58.333333%;
+  	height: auto;
+  	max-width: 58.333333%;
+  	min-height: 496px;
+  	padding-top: 0;
+  }
+
+    /************ MIDES DEL BLOC DELS BOTONS ***************/
+
+    #botons_mes_gran_1200
+    {
+    	display: block;
+      margin-top: 15px;
+    }
+
+    #botons_1200
+    {
+    	display: none;
+    }
+
+  /************ MIDES DElS COMPONENTS (REGLETES I TEXTS)***************/
+
+  .texts_marc
+  {
+    /*background-color: transparent;
+    border: 0;
+    color: var(--main-gray);*/
+    font-size: 16px; /* Si es canvia aquesta mida per defecte, s'ha de canviar també el font-size de #proporcio_mida_actual_elements */
+    /*min-width: 50px;
+    padding: 5px;
+    text-align: center;*/
+  }
+
+  #proporcio_mida_actual_elements
+  {
+  	font-size: 16px; /* mida per defecte que s'utilitza en el text */
+  }
+
+  /*.texts_marc:focus
+  {
+  	outline: none;
+  	border: 1px dashed #9F9F9F;
+  }*/
+
+  .regleta
+  {
+	  height: 25px;
+  }
+
+  .tipus_1
+  {
+	  width: 25px;
+  }
+
+  .tipus_2
+  {
+	  width: 50px;
+  }
+
+  .tipus_3
+  {
+	  width: 75px;
+  }
+
+  .tipus_4
+  {
+	  width: 100px;
+  }
+
+  .tipus_5
+  {
+	  width: 125px;
+  }
+
+  .tipus_6
+  {
+	  width: 150px;
+  }
+
+  .tipus_7
+  {
+	  width: 175px;
+  }
+
+  .tipus_8
+  {
+	  width: 200px;
+  }
+
+  .tipus_9
+  {
+	  width: 225px;
+  }
+
+  .tipus_10
+  {
+	  width: 250px;
+  }
+
+}

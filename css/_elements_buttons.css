@@ -1,0 +1,30 @@
+.texts_marc {
+  border: 0px;
+  background-color: transparent;
+  min-width: 50px;
+  color: #858585;
+  text-align: center;
+  padding: 5px;
+  font-size: 24px; /* Si es canvia aquesta mida per defecte, s'ha de canviar també el font-size de #proporcio_mida_actual_elements */
+}
+
+#proporcio_mida_actual_elements {
+	font-size: 24px; /* mida per defecte que s'utilitza en el text */
+}
+
+.texts_marc:focus {
+	outline: none;
+	border: 1px dashed #9F9F9F;
+	outline: none;
+}
+
+.icones {
+	width: fit-content;
+	float: left;
+	margin: 2px;
+	cursor: pointer;
+}
+
+a.icones:hover {
+	color: white !important;
+}

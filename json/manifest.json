@@ -1,0 +1,9 @@
+{
+  "name": "Regletes. Curs Regletes. PrisMa",
+  "short_name": "Regletes PrisMa",
+  "theme_color": "#5a7bb8",
+  "background_color": "#ffffff",
+  "display": "browser",
+  "scope": "/documents/activitat/regletes/index.html",
+  "start_url": "/documents/activitat/regletes/index.html"
+}

@@ -1,0 +1,83 @@
+/************ MIDES DE LES REGLETES ***************/
+.regleta
+{
+	border: 0;
+	border-radius: 4px;
+	cursor: move;
+	margin: 4px;
+}
+
+.regleta:hover
+{
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  box-shadow: 0 4px 15px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+	cursor: pointer;
+}
+
+.tipus_1
+{
+	background-color: var(--regleta-nivell-1);
+}
+
+.tipus_2
+{
+	background-color: var(--regleta-nivell-2);
+}
+
+.tipus_3
+{
+	background-color: var(--regleta-nivell-3);
+}
+
+.tipus_4
+{
+	background-color:var(--regleta-nivell-4);
+}
+
+.tipus_5
+{
+	background-color: var(--regleta-nivell-5);
+}
+
+.tipus_6
+{
+	background-color: var(--regleta-nivell-6);
+}
+
+.tipus_7
+{
+	background-color: var(--regleta-nivell-7);
+}
+
+.tipus_8
+{
+	background-color: var(--regleta-nivell-8);
+}
+
+.tipus_9
+{
+	background-color: var(--regleta-nivell-9);
+}
+
+.tipus_10
+{
+	background-color: var(--regleta-nivell-10);
+}
+
+/************ PROPIETATS DEL TEXT INSERIT EN L'ESPAI DE TREBALL ***************/
+
+.texts_marc
+{
+	background-color: transparent;
+	border: 0;
+	color: var(--main-gray);
+	min-width: 50px;
+	padding: 5px;
+	text-align: center;
+}
+
+.texts_marc:focus
+{
+	outline: none;
+	/*border: 1px dashed #9F9F9F;*/
+}

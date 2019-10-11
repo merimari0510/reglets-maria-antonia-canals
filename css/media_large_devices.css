@@ -1,0 +1,153 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+{
+    /************ MIDES DE L'ESTRUCTURA DE LA PÀGINA ***************/
+
+    .container
+    {
+  	   max-width: 992px;
+    }
+
+    .col-lg-4
+    {
+    	-ms-flex: 0 0 33.333333%;
+    	flex: 0 0 33.333333%;
+    	max-width: 33.333333%;
+    	padding-top: 0;
+    }
+
+    .col-lg-8
+    {
+    	-ms-flex: 0 0 66.666667%;
+    	flex: 0 0 66.666667%;
+    	height: auto;
+    	max-width: 66.666667%;
+    	min-height: 496px;
+    	padding-top: 0;
+    }
+
+    /************ MIDES DEL BLOC DELS BOTONS ***************/
+
+    #botons_mes_gran_1200, #exclusivitat_prisma
+    {
+    	display: block;
+		margin-top: 10px;
+    }
+
+    #botons_1200
+    {
+  	   display: none;
+    }
+	
+	#exclusivitat_prisma {
+		background: var(--exlusivitat-prisma);
+		border: 1px solid var(--border-gray-clar);
+		border-radius: 4px;
+		padding: 10px;
+	  }
+	  
+	  #logotip_prima
+	  {
+		  margin: 0px;
+	  }
+	  
+	  #logotip_prima img
+	  {
+		  float: left;
+		  height: 62px;
+		  margin-top: 1px;
+		  margin-right: 8px;
+	  }
+	  
+	  #text-exclusiu
+	  {
+		  color: var(--text-exclusiu);
+		  font-size: 14px;
+		  line-height: 22px;
+		  margin-bottom: 0px;
+	  }
+	  
+	  .content_canvas
+	  {
+		  height: 546px;
+	  }
+
+  /************ MIDES DElS COMPONENTS (REGLETES I TEXTS)***************/
+
+  .texts_marc
+  {
+    /*border: 0;
+    background-color: transparent;
+    color: var(--main-gray);*/
+    font-size: 20px; /* Si es canvia aquesta mida per defecte, s'ha de canviar també el font-size de #proporcio_mida_actual_elements */
+    /*min-width: 50px;
+    padding: 5px;
+    text-align: center;*/
+  }
+
+  #proporcio_mida_actual_elements
+  {
+  	font-size: 20px; /* mida per defecte que s'utilitza en el text */
+  }
+
+  /*.texts_marc:focus
+  {
+  	border: 1px dashed #9F9F9F;
+  	outline: none;
+  }*/
+
+  .regleta
+  {
+	  height: 25px;
+  }
+
+  .tipus_1
+  {
+	  width: 25px;
+  }
+
+  .tipus_2
+  {
+	  width: 50px;
+  }
+
+  .tipus_3
+  {
+	  width: 75px;
+  }
+
+  .tipus_4
+  {
+	  width: 100px;
+  }
+
+  .tipus_5
+  {
+	  width: 125px;
+  }
+
+  .tipus_6
+  {
+	  width: 150px;
+  }
+
+  .tipus_7
+  {
+	  width: 175px;
+  }
+
+  .tipus_8
+  {
+	  width: 200px;
+  }
+
+  .tipus_9
+  {
+	  width: 225px;
+  }
+
+  .tipus_10
+  {
+	  width: 250px;
+  }
+}
