@@ -1,11 +1,3 @@
-<?php 
-
-require('../../../../config.php');
-include('../../../../../intranet/inc/dades_moodle.php');
-include('../../../../../intranet/inc/dades.php');
-
-$course = 'REG';
-?>
 <!DOCTYPE html>
 <html lang="ca">
 <head>
@@ -60,89 +52,6 @@ $course = 'REG';
  
 </head>
 <body>
-
-<?php
-		if (isloggedin()) 
-		{
-			$user_course = false;
-			
-			$dni_user = $USER->username;
-			
-			$connexio_m = mysqli_connect('localhost',$usuari_m,$pw_m,$bbdd_m);
-			if (mysqli_connect_errno())
-			{
-				echo "No es pot connectar: " . mysqli_connect_error();
-			}
-			else 
-			{
-				mysqli_set_charset($connexio_m, "utf8");
-				
-				/* Agafar el dni del usuari */
-				$sql_id_user_moodle = "SELECT id FROM `mdl_user` where username like '".$dni_user."%'";
-				
-				$result_id_user_moodle = mysqli_query($connexio_m, $sql_id_user_moodle);
-				$row_id_usuari_moodle = mysqli_fetch_array($result_id_user_moodle);
-				$id_user_moodle = $row_id_usuari_moodle['id'];
-				
-				//Si és algu del despatx, pot accedir a l'activitat
-				if ($id_user_moodle == 1006 or $id_user_moodle == 125 or $id_user_moodle == 6564 or $id_user_moodle == 28873 or $id_user_moodle == 14703 or $id_user_moodle == 18107 or $id_user_moodle == 16413 or $id_user_moodle == 14706 or $id_user_moodle == 24197)
-				{
-					$user_course = true;
-					//echo "<span style=\"color: #5554F0; font-weight: bold;\">course user despatx<br></span>";
-				}
-				else 
-				{
-					//Si és algun tutor que està al Laboratori, pot accedir a l'activitat
-					
-					//Obtenim les persones que es troben en el curs $course del laboratori
-					$sql_course_lab_moodle = "SELECT * FROM mdl_user_enrolments WHERE enrolid = (SELECT e.id FROM mdl_enrol AS e WHERE courseid = (SELECT c.id FROM mdl_course as c where shortname like '%".$course."%LAB%') and e.enrol = 'manual')";
-					$result_course_lab_moodle = mysqli_query($connexio_m, $sql_course_lab_moodle);
-					//$row_course_lab_moodle = mysqli_fetch_array($result_course_lab_moodle);
-					
-					$is_user = false;
-					while ($row_course_lab_moodle = mysqli_fetch_array($result_course_lab_moodle) and !$is_user)
-					{
-						$id_user_course_moodle = $row_course_lab_moodle['userid'];
-						
-						if ($id_user_course_moodle == $id_user_moodle) 
-						{
-							$is_user = true;
-						}
-					}
-					
-					if ($is_user)
-					{
-						$user_course = true;
-					}
-					else 
-					{
-						//Busques tots els cursos oberts amb codi $curs
-						$sql_course_visible_moodle = "SELECT shortname FROM mdl_course where shortname like '%".$course."%a' and visible=1";
-						$result_course_visible_moodle = mysqli_query($connexio_m, $sql_course_visible_moodle);
-						
-						$is_user = false;
-						//Per cada curs obert i mentre no estigui inscrit, comproves si esta inscrit.
-						// Si està inscrit, $user_course = true;
-						while ($row_course_visible_moodle = mysqli_fetch_array($result_course_visible_moodle) and !$is_user)
-						{
-							$shortname_course = $row_course_visible_moodle['shortname'];
-							$sql_user_in_course_moodle = "SELECT * FROM mdl_user_enrolments WHERE userid = ".$id_user_moodle." and enrolid = (SELECT e.id FROM mdl_enrol AS e WHERE courseid = (SELECT c.id FROM mdl_course as c where shortname like '".$shortname_course."') and e.enrol = 'manual')";
-							$result_user_in_course_moodle = mysqli_query($connexio_m, $sql_user_in_course_moodle);
-							$row_user_in_course_moodle = mysqli_fetch_array($result_user_in_course_moodle);
-							if (mysqli_num_rows($result_user_in_course_moodle)>0) $is_user = true;
-						}
-						
-						if ($is_user)
-						{
-							$user_course = true;
-						}
-					}
-				}
-			}
-
-			if($user_course) 
-			{
-			?>
 			 <script>
 				var es_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 				var es_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
@@ -389,54 +298,6 @@ $course = 'REG';
 			  <script type="text/javascript" src="js/botons.js"></script>
 			  <!-- TITOL JS -->
 			  <script type="text/javascript" src="js/titol.js"></script>
-
-<?php
-			}
-			else {
-				$connexio = mysqli_connect('localhost',$usuari,$pw,$bbdd);
-				if (mysqli_connect_errno())
-				{
-					echo "No es pot connectar: " . mysqli_connect_error();
-				}
-				else 
-				{
-					mysqli_set_charset($connexio, "utf8");
-					$sql_course = "SELECT `NOM CURS` as nom FROM cursos where `DATA INICI` >= CURRENT_DATE and curs like '".$course."' order by id_Curs ASC limit 1";
-					$result_course = mysqli_query($connexio, $sql_course);
-					$row_course = mysqli_fetch_array($result_course);
-					$titol_curs = $row_course['nom'];
-				}			
-				
-			?>
-				<div id="activitat" class="marc_activitat">
-				<img id="capcalera" src="https://www.prisma.cat/campus/documents/activitat/banner_prisma_rectangle.png">
-				<div id="cos_error"> 
-					<p style="margin-right: 40px; margin-left: 40px; text-align: center; line-height: 25px;">Per accedir a l’activitat has d’estar inscrit al curs <span style="color: #23527c; font-weight: bold;"><?php echo $titol_curs ?></span> i aquest encara ha d’estar obert.</p>
-				</div>
-				
-				<div id="peu" align="center">
-					<br>Pl. Poeta Marquina 5, 1r-1a · 17002 Girona · 972 21 75 65 · 678 12 36 87 · <a href="https://www.prisma.cat" target="_blank">www.prisma.cat</a> · secretaria@prisma.cat
-				</div>
-				</div>
-			<?php
-			}
-		}
-		else {
-		?>
-		<div id="activitat" class="marc_activitat">
-			<img id="capcalera" src="https://www.prisma.cat/campus/documents/activitat/banner_prisma_rectangle.png">
-			<div id="cos_error"> 
-				<p align="center">Per accedir a l’activitat has d’haver iniciat sessió al Campus PrisMa.</p>
-			</div>
-			
-			<div id="peu" align="center">
-				<br>Pl. Poeta Marquina 5, 1r-1a · 17002 Girona · 972 21 75 65 · 678 12 36 87 · <a href="https://www.prisma.cat" target="_blank">www.prisma.cat</a> · secretaria@prisma.cat
-			</div>
-		</div>
-		<?php 
-		}
-		?>
-  
 
 </body>
 </html>
